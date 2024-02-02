@@ -8,4 +8,7 @@ var filter = function(arr, fn) {
         return fn(a,i)
     })
     return val
+
+    //Higher order function
+    // return arr.filter(fn)
 };
