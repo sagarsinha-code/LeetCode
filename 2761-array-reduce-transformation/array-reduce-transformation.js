@@ -8,27 +8,27 @@ var reduce = function (nums, fn, init) {
 
     // solution 1: 
 
-    if (nums.length > 0) {
-        const value = nums.map((num) => {
-            init = fn(init, num);
-            return init;
-        });
+    // if (nums.length > 0) {
+    //     const value = nums.map((num) => {
+    //         init = fn(init, num);
+    //         return init;
+    //     });
 
-        return value[value.length - 1]
-    } else {
-        return init;
-    }
+    //     return value[value.length - 1]
+    // } else {
+    //     return init;
+    // }
 
 
 
 
     // solution 2:
-    // let res = init;
+    let res = init;
 
-    // for (const i of nums) {
-    //     res = fn(res, i)
-    // }
-    //     return res;
+    for (const i of nums) {
+        res = fn(res, i)
+    }
+        return res;
 
 
 
