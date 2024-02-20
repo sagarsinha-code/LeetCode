@@ -6,22 +6,30 @@
  */
 var reduce = function (nums, fn, init) {
 
-    // const value = nums.map((num) => {
-    //     init = fn(init, num);
-    //     return init;
-    // });
+    // solution 1: 
 
-    // return value[value.length - 1]
+    if (nums.length > 0) {
+        const value = nums.map((num) => {
+            init = fn(init, num);
+            return init;
+        });
 
-    let res = init;
-
-    for (const i of nums) {
-        res = fn(res, i)
+        return value[value.length - 1]
+    } else {
+        return init;
     }
-    
 
-    // return nums.map((num) => {
-    //     res = fn(res, num)
-        return res;
-    // })
+
+
+
+    // solution 2:
+    // let res = init;
+
+    // for (const i of nums) {
+    //     res = fn(res, i)
+    // }
+    //     return res;
+
+
+
 };
