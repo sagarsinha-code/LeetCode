@@ -18,25 +18,21 @@ var sortColors = function(nums) {
     
     let a = 0;
 
-    while(x>0) {
-        nums[a] = 0;
-        x--;
-        a++;
+    while(a<nums.length) {
+        if(x>0) {
+            nums[a] = 0;
+            x--;
+            a++;
+        } else if(y>0) {
+            nums[a] = 1;
+            y--;
+            a++;
+        } else {
+            nums[a] = 2;
+            y--;
+            a++;
+        }
     }
-
-
-    while(y>0){
-        nums[a] = 1;
-        y--;
-        a++;
-    }
-
-    while(z>0) {
-        nums[a] = 2;
-        z--;
-        a++;
-    }
-
 
     // nums = arr;
     return nums;
